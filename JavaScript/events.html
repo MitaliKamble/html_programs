@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script type="text/JavaScript">
+      function validate(){
+                var UserName=document.myform.username.value;
+               // document.write(UserName);
+                var PassWord=document.myform.pwd.value;
+               // document.write(PassWord);
+            //    if(UserName==="mitali"&& PassWord==="12345"){
+            //     document.write("login is sucess")
+            //    }
+            //    else
+            //    {
+            //     document.write("Login is failed")
+            //    }
+            if(UserName===""&& PassWord==="")
+             {
+            document.write("Please enter your username & password")
+             }
+             else if(PassWord.length<8){
+                document.write("Please enter above 8 character password")
+             }
+             else if(UserName==="demo" && PassWord==="123456789")
+             {
+                document.write("Login is success")
+             }
+             else{
+                document.write("login is failed")
+             }
+
+            }
+    </script>
+  </head>
+  <body>
+    <form name="myform" method="post" onsubmit="validate()">
+      Username:<input type="text" name="username" /><br /><br />
+      Password:<input type="password" name="pwd" /><br /><br />
+      <input type="submit" name="submit" />
+    </form>
+  </body>
+</html>

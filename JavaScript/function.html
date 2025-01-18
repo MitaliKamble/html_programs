@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        //The below statement is the Function Definition
+      function displayInfo() {
+        document.write("This is Function definition"+"<br>")
+        document.write("This is one more statement")
+      }
+
+      function getInfo() {
+        document.write("This is a getInfo in Javascript")
+      }
+    </script>
+</head>
+<body>
+    <!-- The below statement is calling onclick function -->
+    <button onclick="displayInfo()">click me</button>
+    <input type="submit" value="submit1" onclick="getInfo()">
+    <input type="submit" value="submit2" ondblclick="getInfo()">
+    <input type="submit" value="submit3" onmouseover="getInfo()">
+    <input type="submit" value="submit4" onmouseout="getInfo()">
+</body>
+</html>
