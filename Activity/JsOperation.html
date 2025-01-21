@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Operators Demo</h1>
+    <div id="output" class="section"></div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        function logSection(title, content) {
+            const section = document.createElement("div");
+            section.classList.add("section");
+            section.innerHTML = `<h2>${title}</h2><pre>${content}</pre>`;
+            outputDiv.appendChild(section);
+        }
+
+        // Arithmetic Operators
+        let a = 10, b = 3;
+        let arithmetic = `Addition (a + b): ${a + b}\n` +
+                         `Subtraction (a - b): ${a - b}\n` +
+                         `Multiplication (a * b): ${a * b}\n` +
+                         `Division (a / b): ${a / b}\n` +
+                         `Modulus (a % b): ${a % b}\n` +
+                         `Exponentiation (a ** b): ${a ** b}`;
+        logSection("Arithmetic Operators", arithmetic);
+
+        // Comparison Operators
+        let comparison = `Equal to (a == b): ${a == b}\n` +
+                         `Not equal to (a != b): ${a != b}\n` +
+                         `Strict equal to (a === b): ${a === b}\n` +
+                         `Strict not equal to (a !== b): ${a !== b}`;
+        logSection("Comparison Operators", comparison);
+
+        // Logical Operators
+        let x = true, y = false;
+        let logical = `Logical AND (x && y): ${x && y}\n` +
+                      `Logical OR (x || y): ${x || y}\n` +
+                      `Logical NOT (!x): ${!x}`;
+        logSection("Logical Operators", logical);
+
+        // Assignment Operators
+        let num = 5;
+        let assignment = `Initial value: ${num}\n`;
+        num += 2;
+        assignment += `After += 2: ${num}\n`;
+        num -= 3;
+        assignment += `After -= 3: ${num}`;
+        logSection("Assignment Operators", assignment);
+
+        // Ternary Operator
+        let age = 18;
+        let ternary = `Age: ${age}\n` +
+                      `Eligibility (age >= 18 ? 'Adult' : 'Minor'): ${age >= 18 ? 'Adult' : 'Minor'}`;
+        logSection("Ternary Operator", ternary);
+
+        // Bitwise Operators
+        let p = 5, q = 3; // Binary: p = 0101, q = 0011
+        let bitwise = `Bitwise AND (p & q): ${p & q}\n` +
+                      `Bitwise OR (p | q): ${p | q}\n` +
+                      `Bitwise XOR (p ^ q): ${p ^ q}\n` +
+                      `Bitwise NOT (~p): ${~p}\n` +
+                      `Left Shift (p << 1): ${p << 1}\n` +
+                      `Right Shift (p >> 1): ${p >> 1}`;
+        logSection("Bitwise Operators", bitwise);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic JavaScript Syntax Demo</h1>
+    <div id="output" class="section"></div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        function logSection(title, content) {
+            const section = document.createElement("div");
+            section.classList.add("section");
+            section.innerHTML = `<h2>${title}</h2><pre>${content}</pre>`;
+            outputDiv.appendChild(section);
+        }
+
+        // Variable Declarations
+        // Single-line comment: Declaring variables with different data types
+        let number = 42; // Number type
+        let text = "Hello, world!"; // String type
+        let isJavaScriptFun = true; // Boolean type
+        let undefinedVariable; // Undefined type
+        let nullVariable = null; // Null type
+
+        let variablesInfo = `Number: ${number}\n` +
+                            `String: ${text}\n` +
+                            `Boolean: ${isJavaScriptFun}\n` +
+                            `Undefined: ${undefinedVariable}\n` +
+                            `Null: ${nullVariable}`;
+        logSection("Variable Declarations", variablesInfo);
+
+        /* Multi-line comment:
+           Using console.log and document.write to output information */
+
+        console.log("Console Output Example");
+        console.log("Number:", number);
+        console.log("String:", text);
+        console.log("Boolean:", isJavaScriptFun);
+        console.log("Undefined:", undefinedVariable);
+        console.log("Null:", nullVariable);
+
+        // Using document.write for output (not commonly used in modern practice)
+        document.write("<h2>Document Output</h2>");
+        document.write("<p>Number: " + number + "</p>");
+        document.write("<p>String: " + text + "</p>");
+        document.write("<p>Boolean: " + isJavaScriptFun + "</p>");
+        document.write("<p>Undefined: " + undefinedVariable + "</p>");
+        document.write("<p>Null: " + nullVariable + "</p>");
+
+        // Final summary in the document
+        logSection("Summary", "Variables and outputs demonstrated with different data types and methods to display information.");
+    </script>
+</body>
+</html>

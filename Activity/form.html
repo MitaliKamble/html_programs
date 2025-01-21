@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <script type="text/JavaScript">
+        // Declare variables to store personal information
+// Using appropriate data types for each variable
+let name = "Mitali Kamble"; // String to store the name
+let age = 19; // Number to store the age
+let favoriteColor = "Black"; // String to store the favorite color
+let hobbies = ["Reading", "Traveling", "Coding", "Cooking"]; // Array to store hobbies
+
+// Log the variables to the console
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("Favorite Color:", favoriteColor);
+console.log("Hobbies:", hobbies);
+
+// Display a summary of the information on the webpage using document.write
+document.write("<h1>Personal Information</h1>");
+document.write("<p><strong>Name:</strong> " + name + "</p>");
+document.write("<p><strong>Age:</strong> " + age + "</p>");
+document.write("<p><strong>Favorite Color:</strong> " + favoriteColor + "</p>");
+document.write("<p><strong>Hobbies:</strong></p>");
+document.write("<ul>");
+hobbies.forEach(function(hobby) {
+    document.write("<li>" + hobby + "</li>");
+});
+document.write("</ul>");
+
+/*
+This program declares variables for name, age, favorite color, and hobbies using appropriate data types. 
+It logs the values to the console and uses document.write to display them on the webpage. 
+The hobbies are displayed as a list using a forEach loop to iterate over the array.
+*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
