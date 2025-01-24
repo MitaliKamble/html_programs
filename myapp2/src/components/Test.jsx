@@ -1,9 +1,11 @@
-function Test(){
-    return(
-        <div>
-            <h2>This is Test.jsx component</h2>
-        </div>
-    )
+function Test(props) {
+  return (
+    <div>
+      Hi My Name is {props.empName}. My Location is {props.empAddress}
+    
+      
+    </div>
+  );
 }
 
 export default Test;
